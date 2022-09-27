@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Deploying Infrastructure on AWS using AWS-CLI</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Deploying Infrastructure on AWS using AWS-CLI</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+ARTH TASK
+</section>
+<section data-field="body" class="e-content">
+<section name="9752" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="3c91" id="3c91" class="graf graf--h3 graf--leading graf--title">Deploying Infrastructure on AWS using AWS-CLI</h3><p name="f84a" id="f84a" class="graf graf--p graf-after--h3">Deploying Infrastructure on AWS using AWS-CLI</p><h4 name="1425" id="1425" class="graf graf--h4 graf-after--p">Task Description — AWS :</h4><p name="aa25" id="aa25" class="graf graf--p graf-after--h4">🔅 Create a key pair</p><p name="4eda" id="4eda" class="graf graf--p graf-after--p">🔅 Create a security group</p><p name="3e5d" id="3e5d" class="graf graf--p graf-after--p">🔅 Launch an instance using the above created key pair and security group.</p><p name="e0e9" id="e0e9" class="graf graf--p graf-after--p">🔅 Create an EBS volume of 1 GB.</p><p name="6ec8" id="6ec8" class="graf graf--p graf-after--p">🔅 The final step is to attach the above created EBS volume to the instance you created in the previous steps.</p><blockquote name="8050" id="8050" class="graf graf--blockquote graf-after--p">Since we know that AWS is a technology and to use any technology like AWS, we have two ways: Using WebUI And Using CLI (Command Line Interface)</blockquote><figure name="aa70" id="aa70" class="graf graf--figure graf-after--blockquote"><img class="graf-image" data-image-id="1*tgGvzqBLPRhnMiJw6fuLWA.jpeg" data-width="1280" data-height="720" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*tgGvzqBLPRhnMiJw6fuLWA.jpeg"></figure><h4 name="4b1c" id="4b1c" class="graf graf--h4 graf-after--figure">Why AWS-CLI ?</h4><p name="3609" id="3609" class="graf graf--p graf-after--h4">One of the main benefits is the ability to save substantial time. The savings comes in the form of easier installs, support of all services from one tool, moving beyond GUIs, and automating processes and commands with shell scripting.</p><h4 name="d65b" id="d65b" class="graf graf--h4 graf-after--p">Using CLI (Command Line Interface) :</h4><p name="37f2" id="37f2" class="graf graf--p graf-after--h4">To login to AWS account from the AWS CLI need the access and secret key.To get the access and secret key from IAM services need to add user and given Access type programmatic access(AWS CLI) and AWS Management console access(AWS WebUI)</p><figure name="705d" id="705d" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*bjCyoUN8IfBdrYz99YO9Hg.png" data-width="2837" data-height="1193" src="https://cdn-images-1.medium.com/max/800/1*bjCyoUN8IfBdrYz99YO9Hg.png"></figure><figure name="823a" id="823a" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*fsQlQ_bOriOpEeeHqLYn3Q.png" data-width="2837" data-height="1878" src="https://cdn-images-1.medium.com/max/800/1*fsQlQ_bOriOpEeeHqLYn3Q.png"></figure><figure name="9388" id="9388" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*ReyMgtShsSNBChn3EVKf4w.png" data-width="2844" data-height="1871" src="https://cdn-images-1.medium.com/max/800/1*ReyMgtShsSNBChn3EVKf4w.png"></figure><figure name="fea5" id="fea5" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*40HhoADdv8FI-k-XU-a6Bw.png" data-width="886" data-height="361" src="https://cdn-images-1.medium.com/max/800/1*40HhoADdv8FI-k-XU-a6Bw.png"></figure><h3 name="c467" id="c467" class="graf graf--h3 graf-after--figure">AWS Command Line Interface</h3><p name="2d9c" id="2d9c" class="graf graf--p graf-after--h3">The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts.</p><p name="6eda" id="6eda" class="graf graf--p graf-after--p">Download AWS CLI and check its version</p><figure name="a34d" id="a34d" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*feEIepBj0sNgfKn2MINWog.png" data-width="1137" data-height="453" src="https://cdn-images-1.medium.com/max/800/1*feEIepBj0sNgfKn2MINWog.png"></figure><h4 name="6db4" id="6db4" class="graf graf--h4 graf-after--figure"><em class="markup--em markup--h4-em">STEPS :</em></h4><blockquote name="2adc" id="2adc" class="graf graf--blockquote graf-after--h4">🔅 <em class="markup--em markup--blockquote-em">Create a key-pair</em></blockquote><p name="5352" id="5352" class="graf graf--p graf-after--blockquote">The command to create a key pair is:</p><pre name="ec65" id="ec65" class="graf graf--pre graf-after--p">aws ec2 create-key-pair --key-name &quot;arth-aws&quot;</pre><figure name="d0d0" id="d0d0" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*nd712XuxKR0D6RaiwzWZZQ.png" data-width="1786" data-height="698" src="https://cdn-images-1.medium.com/max/800/1*nd712XuxKR0D6RaiwzWZZQ.png"></figure><figure name="fb74" id="fb74" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*Xr696Skeb5ulcF8B5sRlRw.png" data-width="1781" data-height="701" src="https://cdn-images-1.medium.com/max/800/1*Xr696Skeb5ulcF8B5sRlRw.png"></figure><figure name="944e" id="944e" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*2ZToO7IPuJ2dd_Bk1JOhhQ.png" data-width="2837" data-height="1860" src="https://cdn-images-1.medium.com/max/800/1*2ZToO7IPuJ2dd_Bk1JOhhQ.png"></figure><blockquote name="8e82" id="8e82" class="graf graf--blockquote graf-after--figure">🔅 <em class="markup--em markup--blockquote-em">Create a security group</em></blockquote><p name="1daf" id="1daf" class="graf graf--p graf-after--blockquote">The command to create a security group is:</p><pre name="4857" id="4857" class="graf graf--pre graf-after--p">aws ec2 create-security-group --description &quot;arth-aws&quot; --group-name arth-aws  --vpc-id vpc-758b931d</pre><figure name="e46c" id="e46c" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*c5pk2c8_nkImMYxV0s8AQA.png" data-width="2832" data-height="1853" src="https://cdn-images-1.medium.com/max/800/1*c5pk2c8_nkImMYxV0s8AQA.png"></figure><blockquote name="37c6" id="37c6" class="graf graf--blockquote graf-after--figure">🔅 <em class="markup--em markup--blockquote-em">Launch an instance using the above created key pair and security group</em></blockquote><p name="0c23" id="0c23" class="graf graf--p graf-after--blockquote">The command to launch an instance using the above-created key-pair and security group is :</p><pre name="c4fa" id="c4fa" class="graf graf--pre graf-after--p">aws ec2 run-instances --image-id ami-0e306788ff2473ccb --instance-type t2.micro --count 1 --security-group-ids sg-0fb65b851c9707c43 --key-name arth-aws --subnet-id subnet-0b6532c199731881e</pre><figure name="8533" id="8533" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*0KWJgqkpJIhJ1jPCz8G6Uw.png" data-width="2991" data-height="1927" src="https://cdn-images-1.medium.com/max/800/1*0KWJgqkpJIhJ1jPCz8G6Uw.png"></figure><blockquote name="a4bd" id="a4bd" class="graf graf--blockquote graf-after--figure">🔅 <em class="markup--em markup--blockquote-em">Create an EBS volume of 1 GB and attach it to the instance created above</em></blockquote><p name="c9dd" id="c9dd" class="graf graf--p graf-after--blockquote">The command to create an EBS volume is:</p><pre name="9259" id="9259" class="graf graf--pre graf-after--p">aws ec2 create-volume --availability-zone ap-south-1b --size 1 --volume-type gp2</pre><figure name="ec16" id="ec16" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*g0AxHlrRd3OTgGTGnGAEVA.png" data-width="1464" data-height="479" src="https://cdn-images-1.medium.com/max/800/1*g0AxHlrRd3OTgGTGnGAEVA.png"></figure><p name="98a8" id="98a8" class="graf graf--p graf-after--figure">Command to attach created EBS volume to an instance is:</p><pre name="4b17" id="4b17" class="graf graf--pre graf-after--p">aws ec2 attach-volume --instance-id i-0bbbec2e9579c0f46  --volume-id vol-0f5f839c7ac9daa4c --device /dev/sdh</pre><figure name="08e7" id="08e7" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*vB0Sp_pRZabbUeONdvstlg.png" data-width="1850" data-height="308" src="https://cdn-images-1.medium.com/max/800/1*vB0Sp_pRZabbUeONdvstlg.png"></figure><figure name="0654" id="0654" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*wxJ7-OVRZsxw2MqojJK3XA.png" data-width="2845" data-height="1867" src="https://cdn-images-1.medium.com/max/800/1*wxJ7-OVRZsxw2MqojJK3XA.png"></figure><figure name="9b2f" id="9b2f" class="graf graf--figure graf-after--figure graf--trailing"><img class="graf-image" data-image-id="1*dV8ETYwIJFjykXG91mh24Q.png" data-width="2833" data-height="1867" src="https://cdn-images-1.medium.com/max/800/1*dV8ETYwIJFjykXG91mh24Q.png"></figure></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@tiybok45" class="p-author h-card">Rutvik Bhalerao</a> on <a href="https://medium.com/p/89186a085614"><time class="dt-published" datetime="2020-10-13T14:11:37.665Z">October 13, 2020</time></a>.</p><p><a href="https://medium.com/@tiybok45/deploying-infrastructure-on-aws-using-aws-cli-89186a085614" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on September 22, 2022.</p></footer></article></body></html>

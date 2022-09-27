@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Amazon Simple Queue Service (SQS)</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Amazon Simple Queue Service (SQS)</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Amazon Simple Queue Service (SQS)
+</section>
+<section data-field="body" class="e-content">
+<section name="3d3b" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="1d98" id="1d98" class="graf graf--h3 graf--leading graf--title">Amazon Simple Queue Service (SQS)</h3><p name="e68b" id="e68b" class="graf graf--p graf-after--h3">Amazon Simple Queue Service (SQS)</p><figure name="9af8" id="9af8" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*tB1SYsrsjmnCdFhA08pLbg.png" data-width="500" data-height="500" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*tB1SYsrsjmnCdFhA08pLbg.png"></figure><h3 name="f231" id="f231" class="graf graf--h3 graf-after--figure">Introduction</h3><p name="d617" id="d617" class="graf graf--p graf-after--h3">Amazon Simple Queue Service (SQS) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications. SQS eliminates the complexity and overhead associated with managing and operating message-oriented middleware, and empowers developers to focus on differentiating work. Using SQS, you can send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available. Get started with SQS in minutes using the AWS console, Command Line Interface or SDK of your choice, and three simple commands.</p><p name="6c67" id="6c67" class="graf graf--p graf-after--p">SQS offers two types of message queues. Standard queues offer maximum throughput, best-effort ordering, and at-least-once delivery. SQS FIFO queues are designed to guarantee that messages are processed exactly once, in the exact order that they are sent.</p><h4 name="9a0c" id="9a0c" class="graf graf--h4 graf-after--p"><strong class="markup--strong markup--h4-strong">If we didn’t have SQS, then what happened?</strong></h4><p name="2266" id="2266" class="graf graf--p graf-after--h4">A web server passes the information to an application server and then application server queried an Airline service. If an Application server crashes, then a user loses its query. One of the great thing about SQS is that data is queued in the SQS even if the application server crashes, the message in the queue is marked as an invisible in a timeout interval window. When the timeout runs out, message reappears in the queue; then a new EC2 instance can use this message to perform its job. Therefore, we can say that SQS removes the application server dependency.</p><h3 name="f5d1" id="f5d1" class="graf graf--h3 graf-after--p">Advantages of using SQS</h3><p name="7d0d" id="7d0d" class="graf graf--p graf-after--h3">For Serverless developers, using SQS generally provides a wealth of benefits like</p><p name="cdd9" id="cdd9" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Scalability</strong> Your SQS queues scale to the volume of messages you’re writing and reading. You don’t need to scale the queues; all the scaling and performance-at-scale aspects are taken care of by AWS.</p><p name="e97f" id="e97f" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Pay for what you use</strong> When using SQS, you only get charged for the messages you read and write (see the details in the Pricing section). There aren’t any recurring or base fees.</p><p name="becd" id="becd" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Ease of setup</strong> Since SQS is a managed service, so you don’t need to set up any infrastructure to start using SQS. You can simply use the API to read and write messages, or use the SQS &lt;-&gt; Lambda integration.</p><p name="0cd8" id="0cd8" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Options for Standard and FIFO queues</strong> When creating an SQS queue, you can choose between a standard queue and a FIFO queue out of the box. Both of these queue types can be useful for different purposes.</p><p name="2ff2" id="2ff2" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Automatic deduplication for FIFO queues</strong> Deduplication is important when using queues, and for FIFO queues SQS will do the work to remove any duplicate messages for you. This makes FIFO queues on SQS suitable for tasks where it’s critical to have each task done exactly once.</p><p name="ec3c" id="ec3c" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">A separate queue for unprocessed messages</strong> This feature of SQS is useful for debugging. All messages that couldn’t be processed are sent into a “dead-letter” queue where you can inspect them. This queue has all the usual integrations enabled, so you can subscribe to it using an AWS Lambda event, for example, to send a notification when an item can’t be processed.</p><h3 name="0723" id="0723" class="graf graf--h3 graf-after--p">Disadvantages of using SQS</h3><p name="6c63" id="6c63" class="graf graf--p graf-after--h3">Using SQS can also create challenges for Serverless developers like :</p><p name="1e01" id="1e01" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">High cost at scale</strong> With pay per use pricing, if the number of messages you send is very high, your SQS bill can be quite significant. Part of SQS pricing is data transfer charges, and those can add up if you send larger messages, or if you process messages from outside the main AWS region in which the queue is located. In some cases, when running at scale with millions of messages processed every day, the cost of using SQS might be higher than the cost of operating your own queue system, even including the overhead to manage your own solution.</p><p name="f76a" id="f76a" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Lack of support for broadcast messages</strong> With its “exactly once” delivery, SQS doesn’t support a way for multiple entities to retrieve the same message, making SQS not so useful for one-to-many broadcasts.To address this, in the cases where one-to-many delivery is important, developers can use SQS alongside SNS.</p><p name="7406" id="7406" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Reduced control over performance</strong> When running a message queue system at scale, something you may well end up wanting to do is to fine-tune its performance to suit your needs. With SQS this isn’t an option: the service is fully managed, and you don’t get to look under the hood.</p><h3 name="35bf" id="35bf" class="graf graf--h3 graf-after--p">Some Use Cases of AWS SQS :</h3><figure name="f034" id="f034" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*58uKemlJVNEmWxkAvx78DQ.png" data-width="442" data-height="336" src="https://cdn-images-1.medium.com/max/800/1*58uKemlJVNEmWxkAvx78DQ.png"></figure><h4 name="7338" id="7338" class="graf graf--h4 graf-after--figure">NASA :</h4><p name="9a14" id="9a14" class="graf graf--p graf-after--h4">The NASA Image and Video Library provides easy access to more than 140,000 still images, audio recordings, and videos documenting NASA’s more than half a century of achievements in exploring the vast unknown.The architecture includes Amazon SQS to decouple incoming jobs from pipeline processes and Amazon Simple Notification Service to trigger the processing pipeline when new content is updated.</p><figure name="a4d5" id="a4d5" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*H2ZPoYpqkUFhR6vVi_YFmw.png" data-width="462" data-height="266" src="https://cdn-images-1.medium.com/max/800/1*H2ZPoYpqkUFhR6vVi_YFmw.png"></figure><h4 name="0d01" id="0d01" class="graf graf--h4 graf-after--figure">BMW :</h4><p name="a9e7" id="a9e7" class="graf graf--p graf-after--h4">The BMW Group is using AWS for its connected car application that collects sensor data from BMW 7 Series cars to give drivers dynamically updated map information. BMW built its new car-as-a-sensor (CARASSO) service in only six months leveraging Amazon SQS, Amazon S3, Amazon DynamoDB, Amazon RDS, and AWS Elastic Beanstalk.</p><figure name="6797" id="6797" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*e2m-qsVH2m-WSi7YurAn2Q.png" data-width="502" data-height="234" src="https://cdn-images-1.medium.com/max/800/1*e2m-qsVH2m-WSi7YurAn2Q.png"></figure><h4 name="e1b8" id="e1b8" class="graf graf--h4 graf-after--figure">Capital One :</h4><p name="a642" id="a642" class="graf graf--p graf-after--h4">Capital One is modernizing their retail message queuing by migrating from self-managed message-oriented middleware systems to Amazon SQS. Capital One is using SQS to migrate several core banking applications to the cloud to ensure high availability and cost efficiency while simplifying administrative complexity and overhead.</p><figure name="42fe" id="42fe" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*DqIXfu_stfGFkLvzCxm3Qw.png" data-width="304" data-height="154" src="https://cdn-images-1.medium.com/max/800/1*DqIXfu_stfGFkLvzCxm3Qw.png"></figure><h4 name="b825" id="b825" class="graf graf--h4 graf-after--figure">Redbus.in :</h4><p name="6af7" id="6af7" class="graf graf--p graf-after--h4">RedBus is expanding their AWS solution to include Amazon SQS and SNS for monitoring, alerts, and intercommunication. “Amazon SQS is an especially good solution for enabling messaging between external applications and our applications.”Charan Padmaraju, redBus CTO</p><figure name="fd22" id="fd22" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*8dxdgdacgH71KkRFTlzu4Q.png" data-width="446" data-height="154" src="https://cdn-images-1.medium.com/max/800/1*8dxdgdacgH71KkRFTlzu4Q.png"></figure><h4 name="a795" id="a795" class="graf graf--h4 graf-after--figure">Oyster :</h4><p name="6627" id="6627" class="graf graf--p graf-after--h4">Oyster.com uses Amazon Web Services to store and process images for their website. The team uses Amazon EC2 and Amazon SQS in an integrated workflow to generate the sizes they need for each photo. SQS communicates the photos that need to be processed and the status of the jobs.</p><h3 name="6c04" id="6c04" class="graf graf--h3 graf-after--p"><strong class="markup--strong markup--h3-strong">Conclusion:</strong></h3><p name="196a" id="196a" class="graf graf--p graf-after--h3">Hence, we studied that the AWS SQS helps to send the unlimited number of messages and in any region. Message payloads consist of 256KB of text which can be in any format. SQS is pull-based, not push-based.</p><p name="3756" id="3756" class="graf graf--p graf-after--p">If the text is of the size larger than this extended client library for Java Programming can use. Send and read messages can be done simultaneously.</p><p name="101f" id="101f" class="graf graf--p graf-after--p">Amazon SQS queries can share anonymously or with some specific AWS accounts. The sharing can restrict for some time and by the IP address.</p><p name="82f6" id="82f6" class="graf graf--p graf-after--p graf--trailing">The contents of the message of AWS SQS can secure using keys managed by the AWS Key Management Service.Messages are kept in a queue from 1 minute to 14 days.The default retention period is 4 days. It guarantees that your messages will be processed at least once.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@tiybok45" class="p-author h-card">Rutvik Bhalerao</a> on <a href="https://medium.com/p/76e76a148170"><time class="dt-published" datetime="2021-08-25T03:51:50.565Z">August 25, 2021</time></a>.</p><p><a href="https://medium.com/@tiybok45/amazon-simple-queue-service-sqs-76e76a148170" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on September 22, 2022.</p></footer></article></body></html>
